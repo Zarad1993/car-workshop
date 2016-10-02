@@ -4,9 +4,8 @@ var Schema = mongoose.Schema;
 
 var shopSchema = new Schema({
 	name : {type : String},
-	email : {type : String},
-	category : {type : String},
-	found : {type : Number},
+	category : {type : String, enum: ['Service', 'Body Parts', 'Accessories',]},
+	found : {type : Date},
 	phone : {type : Number},
 	city : {type : String}
 });
